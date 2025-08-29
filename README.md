@@ -2,7 +2,7 @@
 
 This script shows CPU temperature on the display of a water cooler.
 
-Tested with the Rise Mode water cooler
+Tested with the Rise Mode water cooler.
 
 ![](images/cpu-cooler.jpg)
 
@@ -13,39 +13,71 @@ It is configuted to use the tctl temperature from k10temp linux module as the pr
 
 ## Installation
 
-# First identify the vendor id and product id of your device. You can use the `lsusb` utility. Then replace the `VENDOR_ID` and `PRODUCT_ID` in the cpu_temp_monitor.py script.
+- First identify the vendor id and product id of your device. You can use the `lsusb` utility. Then replace the `VENDOR_ID` and `PRODUCT_ID` in the cpu_temp_monitor.py script.
 
-# Save the three files cpu_temp_monitor.py, cpu-temp-monitor.service and install.sh
+- Save the three files cpu_temp_monitor.py, cpu-temp-monitor.service and install.sh
 in the same directory.
 
-# Make the install script executable:
+- Make the install script executable:
 
+```bash
 chmod +x install.sh
+```
 
-# Run the installation script:
+- Run the installation script:
 
+```bash
 sudo ./install.sh
+```
 
 ## Manual Installation (alternative)
 
 If you prefer to install manually:
 
-# Install dependencies
-sudo pip3 install psutil hidapi
+- Install dependencies
 
-# Copy files
+```bash
+sudo pip3 install psutil hidapi
+```
+
+- Copy files
+
+```bash
 sudo cp cpu_temp_monitor.py /usr/local/bin/
 sudo chmod +x /usr/local/bin/cpu_temp_monitor.py
 sudo cp cpu-temp-monitor.service /etc/systemd/system/
+```
 
-# Enable and start service
+- Enable and start service
+
+```bash
 sudo systemctl daemon-reload
 sudo systemctl enable cpu-temp-monitor.service
 sudo systemctl start cpu-temp-monitor.service
+```
 
 ## Useful Commands:
 
-# Check service status: systemctl status cpu-temp-monitor.service
-# View logs: journalctl -u cpu-temp-monitor.service -f
-# Stop service: systemctl stop cpu-temp-monitor.service
-# Restart service: systemctl restart cpu-temp-monitor.service
+- Check service status: 
+
+```bash
+systemctl status cpu-temp-monitor.service
+```
+
+- View logs: 
+
+```bash
+journalctl -u cpu-temp-monitor.service -f
+```
+
+- Stop service: 
+
+```bash
+systemctl stop cpu-temp-monitor.service
+```
+
+- Restart service: 
+
+```bash
+systemctl restart cpu-temp-monitor.service
+```
