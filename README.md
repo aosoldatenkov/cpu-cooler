@@ -9,7 +9,7 @@ Tested with the Rise Mode water cooler.
 ## CPU temperature
 
 The service will automatically start on boot and restart if it crashes. The script handles different CPU temperature sensors.
-It is configuted to use the tctl temperature from k10temp linux module as the primary option. More details [here](https://www.kernel.org/doc/html/v5.6/hwmon/k10temp.html#:~:text=Tctl%20is%20the%20processor%20temperature,like%20die%20or%20case%20temperature.).
+It is configured to use the tctl temperature from k10temp linux module as the primary option. More details [here](https://www.kernel.org/doc/html/v5.6/hwmon/k10temp.html#:~:text=Tctl%20is%20the%20processor%20temperature,like%20die%20or%20case%20temperature.).
 
 ## Installation
 
