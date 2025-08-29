@@ -4,7 +4,7 @@ This script shows CPU temperature on the display of a water cooler.
 
 Tested with the Rise Mode water cooler.
 
-![](images/cpu-cooler.jpg)
+![](images/cpu_cooler.jpg)
 
 ## CPU temperature
 
